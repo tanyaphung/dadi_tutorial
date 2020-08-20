@@ -15,6 +15,7 @@ import dadi
 from dadi import Numerics, PhiManip, Integration, Spectrum
 from numpy import array # don't comment this out
 import datetime
+import os
 todaysdate=datetime.datetime.today().strftime('%Y%m%d')
 
 
