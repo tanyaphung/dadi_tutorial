@@ -125,6 +125,9 @@ scaled_popt=(Nanc,nuB_scaled_dip,nuF_scaled_dip,TB_scaled_gen,TF_scaled_gen)
 ############### Write out output (same for any model) ########################
 print('Writing out parameters **************************************************')
 
+if not os.path.exists(outdir):
+    os.mkdir(outdir)
+
 outputFile=open(str(outdir)+"/"+str(pop)+".dadi.inference."+str(modelName)+".runNum."+str(runNum)+"."+str(todaysdate)+".output","w")
 # get all param names:
 param_names_str='\t'.join(str(x) for x in param_names)
