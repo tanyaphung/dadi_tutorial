@@ -146,7 +146,7 @@ outputFile.close()
 ############### Output SFS ########################
 print('Writing out SFS **************************************************')
 
-outputSFS=str(outdir)+"/"+str(pop)+".dadi.inference."+str(modelName)+".runNum."+str(runNum)+"."+str(todaysdate)+".expSFS"
+outputSFS=str(outdir)+"/"+str(pop)+".dadi.inference."+str(modelName)+".runNum."+str(runNum)+"."+".expSFS"
 
 # 20190117 -- fixed this to output EXPECTED sfs not obs sfs
 model.to_file(outputSFS)
@@ -159,7 +159,7 @@ print('Making plots **************************************************')
 import matplotlib.pyplot as plt
 fig=plt.figure(1)
 #pylab.ion()
-outputFigure=str(str(outdir)+"/"+str(pop)+".dadi.inference."+str(modelName)+".runNum."+str(runNum)+"."+str(todaysdate)+".figure.png")
+outputFigure=str(str(outdir)+"/"+str(pop)+".dadi.inference."+str(modelName)+".runNum."+str(runNum)+"."+".figure.png")
 dadi.Plotting.plot_1d_comp_multinom(model, fs)
 #pylab.show()
 plt.savefig(outputFigure)
